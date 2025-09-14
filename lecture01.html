@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Course - Easy Guide</title>
+</head>
+
+<body>
+
+    <h1>Welcome to Web Development Course</h1>
+    <p>This is a simple guide to help you understand how the Internet works, IP addresses, MAC addresses, Port numbers, and DNS in a very easy way.</p>
+
+    <hr>
+
+    <h2>How Does the Internet Work?</h2>
+
+    <h3>Principle 1: Sharing Information</h3>
+    <p>
+        Imagine you have a file on your computer and want to send it to your friend's computer far away. Instead of carrying a USB physically, we use the internet to transfer data electronically.
+    </p>
+
+    <h3>Principle 2: The Problem of Many Computers</h3>
+    <p>
+        Connecting every computer to every other computer directly is not practical. Instead, we use a central device called a <strong>Switch</strong> to connect many computers in one place (Local Network).
+    </p>
+
+    <h3>Principle 3: Connecting Networks</h3>
+    <p>
+        To connect different networks (like your home and your friend's office), we use a <strong>Router</strong>. Routers forward messages between networks.
+    </p>
+
+    <h3>Principle 4: Finding Devices (IP Address)</h3>
+    <p>
+        Every computer has a unique <strong>IP Address</strong> like a home address, so data knows where to go.
+    </p>
+
+    <h3>Principle 5: Reliability (Packets)</h3>
+    <p>
+        Large files are broken into small pieces called <strong>Packets</strong>. Each packet carries part of the file, sender & receiver address, and sequence number so they can be reassembled properly.
+    </p>
+
+    <hr>
+
+    <h2>Summary</h2>
+    <ul>
+        <li><strong>Direct Link:</strong> Share data between two computers.</li>
+        <li><strong>Switch:</strong> Connect many computers locally.</li>
+        <li><strong>Router:</strong> Connect different networks.</li>
+        <li><strong>IP Address:</strong> Unique address for every device.</li>
+        <li><strong>Packets & Protocols:</strong> Reliable data transfer using TCP/IP.</li>
+    </ul>
+
+    <hr>
+
+    <h2>What is an IP Address?</h2>
+    <p>
+        An <strong>IP Address</strong> is like your house address, but for your computer on the Internet. It helps other computers know where to send data.
+    </p>
+    <p><strong>Example IPv4 Address:</strong> <code>192.168.1.1</code></p>
+    <p><strong>Example IPv6 Address:</strong> <code>2001:0db8:85a3:0000:0000:8a2e:0370:7334</code></p>
+    <p><strong>Simple Example:</strong> If you want to send a letter to your friend, you need their house address. Similarly, data on the internet is sent using IP Addresses.</p>
+
+    <h3>Public vs Private IP</h3>
+    <p><strong>Public IP:</strong> The address visible on the internet, like your home's address where the world can reach you.</p>
+    <p><strong>Private IP:</strong> Address used within your home or office network, like the room number inside your home.</p>
+
+    <hr>
+
+    <h2>What is a MAC Address?</h2>
+    <p>
+        A <strong>MAC Address</strong> is a unique serial number given to every network device (like your computer’s Wi-Fi card).
+    </p>
+    <p><strong>Example MAC Address:</strong> <code>3C:22:FB:A3:B4:C5</code></p>
+    <p><strong>Simple Explanation:</strong> Think of it like a fingerprint – no two devices have the same MAC Address. It helps devices in your local network recognize each other.</p>
+
+    <h3>How to Find MAC Address:</h3>
+    <ul>
+        <li><strong>Windows:</strong> Open Command Prompt and type <code>ipconfig /all</code> or <code>getmac /v</code>.</li>
+        <li><strong>macOS:</strong> Open Terminal and type <code>ifconfig</code>.</li>
+    </ul>
+
+    <hr>
+
+    <h2>What is a Port Number?</h2>
+    <p>
+        A <strong>Port Number</strong> is like the door number of a house. It helps computers know which application should receive the data.
+    </p>
+    <p><strong>Example:</strong></p>
+    <ul>
+        <li><strong>HTTP (Web Page):</strong> Port <code>80</code></li>
+        <li><strong>HTTPS (Secure Web):</strong> Port <code>443</code></li>
+    </ul>
+    <p><strong>Simple Analogy:</strong> Imagine your house has many doors. Port Numbers tell data through which door it should go to reach the correct service (like web browser, email, database).</p>
+
+    <h3>Port Categories:</h3>
+    <ol>
+        <li><strong>Well-Known Ports (0–1023):</strong> Standard apps (HTTP, FTP).</li>
+        <li><strong>Registered Ports (1024–49151):</strong> Specific apps (MySQL, MongoDB).</li>
+        <li><strong>Dynamic Ports (49152–65535):</strong> Temporary use by programs.</li>
+    </ol>
+
+    <hr>
+
+    <h2>What is DNS (Domain Name System)?</h2>
+    <p>
+        DNS is like the phonebook of the internet. Instead of remembering IP Addresses, you type <code>google.com</code>, and DNS finds the correct IP address for you.
+    </p>
+
+    <h3>How DNS works (Step by Step):</h3>
+    <ol>
+        <li><strong>Local Cache:</strong> Your computer first checks if it already knows the answer.</li>
+        <li><strong>Recursive Resolver:</strong> Asks ISP's DNS Server (like Google's 8.8.8.8).</li>
+        <li><strong>Hierarchy Search:</strong> Root → TLD → Authoritative Server → IP Address.</li>
+        <li><strong>Final Result:</strong> DNS returns IP to your browser.</li>
+        <li><strong>Connection Established:</strong> Browser connects to website.</li>
+    </ol>
+
+    <hr>
+
+    <footer>
+        <p>Learn More:</p>
+        <ul>
+            <li><a href="http://google.com" target="_blank">google.com</a></li>
+            <li><a href="http://whatismyip.com" target="_blank">whatismyip.com</a></li>
+        </ul>
+            <a href="lecture02.html">Next: Learn About What is Html</a>
+    </footer>
+
+</body>
+
+</html>

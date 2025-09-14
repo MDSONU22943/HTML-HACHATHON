@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple HTML Forms Guide for Beginners</title>
+</head>
+
+<body>
+
+    <h1>HTML Forms Made Easy – Step by Step Guide</h1>
+    <p>A form helps collect information from users and send it to a server. Forms make the web interactive (e.g., login, search, order).</p>
+
+    <hr>
+
+    <h2>What Is a Form?</h2>
+    <p>
+        A <code>&lt;form&gt;</code> is a container for inputs like text boxes, radio buttons, checkboxes, dropdowns, etc.
+    </p>
+
+    <h3>Example of a Simple Form Structure</h3>
+    <form>
+        <label for="firstName">First Name:</label><br>
+        <input type="text" id="firstName" name="firstName"><br><br>
+
+        <label for="lastName">Last Name:</label><br>
+        <input type="text" id="lastName" name="lastName"><br><br>
+
+        <button type="submit">Submit Form</button>
+    </form>
+
+    <p><em>Explanation:</em></p>
+    <ul>
+        <li><strong>&lt;label&gt;:</strong> Text telling user what to type.</li>
+        <li><strong>&lt;input type="text"&gt;:</strong> A box where the user types text.</li>
+        <li><strong>&lt;button type="submit"&gt;:</strong> Sends data when clicked.</li>
+    </ul>
+
+    <hr>
+
+    <h2>Why Connect Label & Input?</h2>
+    <p>
+        By using <code>id</code> and <code>for</code> attributes, clicking the label focuses the input box and helps screen readers.
+    </p>
+    <form>
+        <label for="userEmail">Email:</label><br>
+        <input type="email" id="userEmail" name="email"><br><br>
+
+        <button type="submit">Submit Email</button>
+    </form>
+
+    <hr>
+
+    <h2>Select One – Radio Buttons</h2>
+    <p>Radio buttons let user pick only one option from a group.</p>
+    <form>
+        <label>Gender:</label><br>
+
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label><br>
+
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br>
+
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label><br><br>
+
+        <button type="submit">Submit Gender</button>
+    </form>
+
+    <p><em>Key point:</em> All radio buttons must share the same <code>name</code> to work as a group.</p>
+
+    <hr>
+
+    <h2>Select Many – Checkboxes</h2>
+    <p>Checkboxes let users pick multiple options.</p>
+    <form>
+        <label>Choose your favorite pizza toppings:</label><br>
+
+        <input type="checkbox" id="pepperoni" name="toppings" value="pepperoni">
+        <label for="pepperoni">Pepperoni</label><br>
+
+        <input type="checkbox" id="mushrooms" name="toppings" value="mushrooms">
+        <label for="mushrooms">Mushrooms</label><br>
+
+        <input type="checkbox" id="onions" name="toppings" value="onions">
+        <label for="onions">Onions</label><br><br>
+
+        <button type="submit">Submit Toppings</button>
+    </form>
+
+    <hr>
+
+    <h2>A Better Submit Button</h2>
+    <p>
+        Instead of <code>&lt;input type="submit"&gt;</code>, use <code>&lt;button type="submit"&gt;</code>. It can contain other HTML elements.
+    </p>
+    <form>
+        <button type="submit"><strong>Send</strong> My Data</button>
+    </form>
+
+    <hr>
+
+    <h2>Multi-Line Text – Textarea</h2>
+    <p>Use <code>&lt;textarea&gt;</code> for long text input like comments.</p>
+    <form>
+        <label for="comments">Any special instructions?</label><br>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+
+        <button type="submit">Submit Comments</button>
+    </form>
+
+    <hr>
+
+    <h2>Dropdown List – Select</h2>
+    <p>Use <code>&lt;select&gt;</code> to allow the user to pick one option from many.</p>
+    <form>
+        <label for="country">Country:</label><br>
+        <select id="country" name="country">
+            <option value="">--Please choose an option--</option>
+            <option value="in">India</option>
+            <option value="us">USA</option>
+            <option value="uk">United Kingdom</option>
+            <option value="au">Australia</option>
+        </select><br><br>
+
+        <button type="submit">Submit Country</button>
+    </form>
+
+    <hr>
+
+    <h2>Special Inputs – HTML5 Power-Ups</h2>
+
+    <form>
+        <label for="password">Password (hidden):</label><br>
+        <input type="password" id="password" name="password"><br><br>
+
+        <label for="age">Age (18 to 99):</label><br>
+        <input type="number" id="age" name="age" min="18" max="99"><br><br>
+
+        <label for="dob">Date of Birth:</label><br>
+        <input type="date" id="dob" name="dob"><br><br>
+
+        <button type="submit">Submit Info</button>
+    </form>
+
+    <p><em>Why use these?</em></p>
+    <ul>
+        <li><strong>type="password":</strong> Hides input characters (like ******).</li>
+        <li><strong>type="number":</strong> Allows only numbers and restricts values.</li>
+        <li><strong>type="date":</strong> Shows a calendar for easy date selection.</li>
+    </ul>
+
+    <hr>
+    <footer>
+        <a href="lecture05.html">Next: Learn About Media Tag</a>
+        <br>
+        <a href="lecture03.html">Back: Learn About File Path Boiler Plate Code Class ID</a>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple HTML File Structure Guide</title>
+</head>
+
+<body>
+
+    <h1>Simple HTML Guide – File Structure & Important Tags</h1>
+    <p>This guide explains how to organize your website files and basic HTML concepts clearly for beginners.</p>
+
+    <hr>
+
+    <h2>What is the File Path System?</h2>
+
+    <p><strong>Key Idea:</strong> A website is made of multiple files (HTML, images, CSS, JS, etc.), organized in folders.</p>
+
+    <h3>Why Do We Need File Paths?</h3>
+    <p>
+        When you want to show an image in your HTML file, the browser needs to know exactly where that image is.
+    </p>
+
+    <h3>Relative File Paths (Most Common)</h3>
+    <p><em>Think of it like giving directions based on where you are now.</em></p>
+
+    <pre>
+my-website/
+├── index.html
+├── about.html
+├── images/
+│   ├── logo.png
+│   └── hero.jpg
+├── pages/
+    ├── contact.html
+    └── terms.html
+    </pre>
+
+    <p><strong>Examples:</strong></p>
+    <ul>
+        <li><strong>Same Folder:</strong> From index.html to about.html → <code>&lt;a href="about.html"&gt;About Us&lt;/a&gt;</code></li>
+        <li><strong>Sub-folder (Going down):</strong> From index.html to logo.png → <code>&lt;img src="images/logo.png" alt="Logo"&gt;</code></li>
+        <li><strong>Parent folder (Going up):</strong> From contact.html to logo.png → <code>&lt;img src="../images/logo.png" alt="Logo"&gt;</code></li>
+    </ul>
+
+    <h3>Absolute File Paths</h3>
+    <p><em>Full address from the web (use for external files only).</em></p>
+    <ul>
+        <li>Example Link to Google: <code>&lt;a href="https://www.google.com" target="_blank"&gt;Search on Google&lt;/a&gt;</code></li>
+        <li>Example External Image: <code>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Html5_logo_and_wordmark.svg" alt="HTML5 Logo"&gt;</code></li>
+    </ul>
+
+    <p><strong>Important Tip:</strong> Never use absolute local computer paths like <code>C:/Users/Arjun/Desktop/image.png</code> because they will break on other computers or when uploaded to the internet.</p>
+
+    <hr>
+
+    <h2>HTML Boilerplate (Basic Structure of Every Webpage)</h2>
+
+    <p>
+        Every webpage should start with this basic setup called a "boilerplate". It helps the browser understand the page properly.
+    </p>
+
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;My Website&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        <!-- Your content goes here -->
+    &lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+
+    <p><strong>Why is this important?</strong></p>
+    <ul>
+        <li><strong>&lt;!DOCTYPE html&gt;:</strong> Tells browser to use the latest rules.</li>
+        <li><strong>&lt;meta charset="UTF-8"&gt;:</strong> Makes sure special characters (€, ₹) display properly.</li>
+        <li><strong>&lt;meta name="viewport"&gt;:</strong> Makes your site mobile-friendly.</li>
+        <li><strong>&lt;title&gt;:</strong> Name shown in the browser tab.</li>
+    </ul>
+
+    <hr>
+
+    <h2>The <code>&lt;div&gt;</code> Tag – The Generic Container</h2>
+
+    <p>
+        A <code>&lt;div&gt;</code> groups elements together so they can be treated as one block.
+    </p>
+
+    <p><strong>Example:</strong></p>
+    <div style="border:1px solid #000; padding:10px; max-width:300px;">
+        <img src="https://cdn.britannica.com/16/234216-050-C66F8665/beagle-hound-dog.jpg" alt="User Avatar" width="100" /><br>
+        <h2>John Doe</h2>
+        <p>Loves to code and teach HTML.</p>
+    </div>
+
+    <p><em>Why use a &lt;div&gt;?</em></p>
+    <ul>
+        <li>To group related items together.</li>
+        <li>Make it easy to style them later (with CSS or JavaScript).</li>
+    </ul>
+
+    <hr>
+
+    <h2>class vs id (Labels for Elements)</h2>
+
+    <p>
+        <strong>id:</strong> Unique label for ONE element (like a Social Security Number).</p>
+    <pre>&lt;div id="main-header"&gt;My Website&lt;/div&gt;</pre>
+
+    <p><strong>class:</strong> Shared label for multiple elements (like a Job Title).</p>
+    <pre>
+&lt;div class="profile-card"&gt;User 1&lt;/div&gt;
+&lt;div class="profile-card"&gt;User 2&lt;/div&gt;
+    </pre>
+
+    <p><em>Use:</em></p>
+    <ul>
+        <li><strong>#id</strong> for unique elements.</li>
+        <li><strong>.class</strong> for groups of similar elements.</li>
+    </ul>
+
+    <hr>
+
+    <h2>The <code>&lt;span&gt;</code> Tag – Inline Highlighter</h2>
+
+    <p>
+        A <code>&lt;span&gt;</code> is like a highlighter pen that marks a word without breaking the line.
+    </p>
+
+    <p><strong>Example:</strong></p>
+    <p>This is a <span>very important</span> message.</p>
+
+    <p><em>Why use a &lt;span&gt;?</em></p>
+    <ul>
+        <li>Highlight part of a sentence.</li>
+        <li>Apply styles or JavaScript only to a word or phrase without creating new lines.</li>
+    </ul>
+
+    <hr>
+    <footer>
+        <a href="lecture04.html">Next: Learn About Forms</a>
+        <br>
+        <a href="list-table.html">Back: Learn About What is List and Table</a>
+    </footer>
+
+</body>
+
+</html>

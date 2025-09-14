@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy HTML Media Guide</title>
+</head>
+
+<body>
+
+    <h1>Simple HTML Media Guide for Beginners</h1>
+    <p>Learn how to embed videos and audio into your webpage the easy way, without relying on plugins like Flash.</p>
+
+    <hr>
+
+    <h2>Why Add Media?</h2>
+    <p>The web is more than just text and pictures. We need video and audio to make websites interactive (like playing a tutorial video or listening to music).</p>
+
+    <hr>
+
+    <h2>The Basic Video Example</h2>
+    <p><strong>Problem:</strong> A video tag without controls only shows the first frame as a static image.</p>
+
+    <p><strong>Solution:</strong> Add the <code>controls</code> attribute to show a play/pause button, timeline, and volume control.</p>
+
+    <video src="" controls width="480" height="270">
+        Sorry, your browser does not support the video tag.
+    </video>
+
+    <hr>
+
+    <h2>Control Video Behavior with Attributes</h2>
+
+    <ul>
+        <li><strong>autoplay:</strong> Starts playing the video automatically when the page loads (often muted).</li>
+        <li><strong>loop:</strong> Plays the video over and over again.</li>
+        <li><strong>poster:</strong> Displays an image before the video starts (like YouTube thumbnails).</li>
+    </ul>
+
+    <p><strong>Example:</strong></p>
+    <video src="" width="480" height="270" controls autoplay muted loop>
+        Your browser does not support the video tag.
+    </video>
+
+    <hr>
+
+    <h2>Embedding Audio</h2>
+    <p><strong>Audio works like video but without a visual screen.</strong></p>
+
+    <p><em>Example – Listen to a Theme Song:</em></p>
+    <audio src="theme-song.mp3" controls></audio>
+
+    <hr>
+
+    <h2>Best Practice – Multiple Formats for Maximum Compatibility</h2>
+    <p><strong>Why?</strong> Different browsers support different video formats.</p>
+
+    <p><strong>Solution:</strong> Use multiple <code>&lt;source&gt;</code> tags inside the <code>&lt;video&gt;</code> tag.</p>
+
+    <video width="480" height="270" controls poster="thumbnail.jpg">
+        <source src="video.webm" type="video/webm">
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <p><em>How It Works:</em></p>
+    <ul>
+        <li>The browser tries the first source (webm), if supported, it plays.</li>
+        <li>If not, it moves to the next source (mp4).</li>
+        <li>If neither works, fallback text appears.</li>
+    </ul>
+
+    <hr>
+
+    <h2>Accessibility – Adding Captions and Subtitles</h2>
+    <p><strong>Problem:</strong> Deaf users or non-native speakers can't understand the video.</p>
+
+    <p><strong>Solution:</strong> Add <code>&lt;track&gt;</code> tags to provide captions or subtitles.</p>
+
+    <video controls width="480" height="270">
+        <source src="video.mp4" type="video/mp4">
+        <track src="captions_en.vtt" kind="captions" srclang="en" label="English">
+        <track src="subtitles_es.vtt" kind="subtitles" srclang="es" label="Español">
+        Your browser does not support the video tag.
+    </video>
+
+    <hr>
+
+    <h2>Comparing Two Ways to Embed Video</h2>
+
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>Feature</th>
+            <th>Multiple Sources (Best)</th>
+            <th>Single Source (Simple)</th>
+        </tr>
+        <tr>
+            <td>Browser Compatibility</td>
+            <td>Excellent – Provides fallback formats</td>
+            <td>Good – May not work everywhere</td>
+        </tr>
+        <tr>
+            <td>Flexibility</td>
+            <td>High – Can list many file formats</td>
+            <td>Low – Only one format possible</td>
+        </tr>
+        <tr>
+            <td>Simplicity</td>
+            <td>More complex (multiple lines)</td>
+            <td>Very simple (one line)</td>
+        </tr>
+        <tr>
+            <td>Fallback Text</td>
+            <td>Yes – Custom message if unsupported</td>
+            <td>No fallback</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h2>© How to Add Copyright Symbol</h2>
+
+    <p>Two Ways to Show © Symbol:</p>
+
+    <ul>
+        <li><strong>Entity Name (Recommended):</strong> <code>&amp;copy;</code></li>
+        <li><strong>Entity Number:</strong> <code>&#169;</code></li>
+    </ul>
+
+    <footer>
+        <a href="lecture01.html">Next:Learn About Web Development</a>
+        <br>
+        <a href="lecture04.html">Back: Learn About Forms</a>
+        <p>&copy; 2025 My Awesome Website. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
